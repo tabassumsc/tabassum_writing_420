@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Becoming — a photo narrative by Tabassum Chowdhury documenting her last semester at the University of Michigan, shot on 35mm film." />
+  <title>Becoming — Tabassum Chowdhury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SKIP LINK for keyboard/screen reader users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ══ STICKY HEADER ══ -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="top-bar">
+      <span class="site-title">Becoming</span>
+      <span class="site-sub" aria-label="January through May 2026">January — May 2026</span>
+    </div>
+
+    <!-- Primary navigation -->
+    <nav class="nav-rail" aria-label="Month navigation">
+      <button class="nav-tab" id="ntab-about" aria-current="false" aria-controls="page-about" onclick="selectMonth('about')">About</button>
+      <button class="nav-tab active" id="ntab-jan" aria-current="page" aria-controls="page-jan" onclick="selectMonth('jan')">January</button>
+      <button class="nav-tab" id="ntab-feb" aria-current="false" aria-controls="page-feb" onclick="selectMonth('feb')">February</button>
+      <button class="nav-tab" id="ntab-mar" aria-current="false" aria-controls="page-mar" onclick="selectMonth('mar')">March</button>
+      <button class="nav-tab locked" id="ntab-apr" aria-disabled="true" aria-label="April — coming soon">April</button>
+    </nav>
+
+    <!-- Film strip — January -->
+    <nav class="frame-rail visible" id="strip-jan" aria-label="January frames">
+      <ol class="frame-strip" role="list">
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-wedding')" aria-label="Frame 01 — The wedding">
+            <span class="frame-num" aria-hidden="true">01</span>
+            <span class="frame-img" id="fi-jan-1"><img src="images/jan/wedding.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-bench')" aria-label="Frame 02 — The bench">
+            <span class="frame-num" aria-hidden="true">02</span>
+            <span class="frame-img" id="fi-jan-2"><img src="images/jan/bench1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-game')" aria-label="Frame 03 — The game">
+            <span class="frame-num" aria-hidden="true">03</span>
+            <span class="frame-img" id="fi-jan-3"><img src="images/jan/game1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-boy')" aria-label="Frame 04 — The boy">
+            <span class="frame-num" aria-hidden="true">04</span>
+            <span class="frame-img" id="fi-jan-4"><img src="images/jan/boy1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-im')" aria-label="Frame 05 — The IM building">
+            <span class="frame-num" aria-hidden="true">05</span>
+            <span class="frame-img" id="fi-jan-5"><img src="images/jan/im.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+      </ol>
+    </nav>
+
+    <!-- Film strip — February -->
+    <nav class="frame-rail" id="strip-feb" aria-label="February frames">
+      <ol class="frame-strip" role="list">
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-routine')" aria-label="Frame 01 — The routine">
+            <span class="frame-num" aria-hidden="true">01</span>
+            <span class="frame-img" id="fi-feb-1"><img src="images/feb/routine.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-team')" aria-label="Frame 02 — The team">
+            <span class="frame-num" aria-hidden="true">02</span>
+            <span class="frame-img" id="fi-feb-2"><img src="images/feb/team1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-reset')" aria-label="Frame 03 — The reset">
+            <span class="frame-num" aria-hidden="true">03</span>
+            <span class="frame-img" id="fi-feb-3"><img src="images/feb/reset1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+      </ol>
+    </nav>
+
+    <!-- Film strip — March -->
+    <nav class="frame-rail" id="strip-mar" aria-label="March frames">
+      <ol class="frame-strip" role="list">
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-experiences')" aria-label="Frame 01 — The experiences">
+            <span class="frame-num" aria-hidden="true">01</span>
+            <span class="frame-img" id="fi-mar-1"><img src="images/march/experiences1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-cat')" aria-label="Frame 02 — The cat">
+            <span class="frame-num" aria-hidden="true">02</span>
+            <span class="frame-img" id="fi-mar-2"><img src="images/march/cat1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-rush')" aria-label="Frame 03 — The rush">
+            <span class="frame-num" aria-hidden="true">03</span>
+            <span class="frame-img" id="fi-mar-3"><img src="images/march/rush1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button onclick="jumpTo('s-end')" aria-label="Frame 04 — The end">
+            <span class="frame-num" aria-hidden="true">04</span>
+            <span class="frame-img" id="fi-mar-4"><img src="images/march/end.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+      </ol>
+    </nav>
+  </header>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main id="main-content">
+
+    <!-- ══ ABOUT ══ -->
+    <article class="month-page" id="page-about" aria-labelledby="about-heading" hidden>
+      <div class="cover-photo">
+        <img src="images/cover/cover.jpg" alt="Tabassum Chowdhury holding a film camera in a mirror selfie, wearing a Michigan Recreation sweatshirt" />
+      </div>
+      <div class="about-body">
+        <header class="month-hero">
+          <p class="month-eyebrow">About this project</p>
+          <h1 class="month-title" id="about-heading">Becoming</h1>
+        </header>
+        <section class="about-section" aria-labelledby="project-heading">
+          <h2 id="project-heading" class="about-subheading">The project</h2>
+          <div class="prose">
+            <p>For my capstone, I'm working on a photo narrative about my last semester of college. The main idea is looking at independence not as one big moment, but as something that builds slowly over time through everyday experiences. I originally was thinking about this more generally, but now I've shifted to structuring it as a timeline — from January through graduation — so you can actually see that progression as it happens.</p>
+            <p>I've also decided to only shoot on film, which is a big part of the project. I'm using one roll of 35mm film per month, so each roll kind of represents a specific period of time. Film forces me to slow down and be more intentional about what I capture, and I like that it mirrors the idea of gradual change and not really knowing how things will turn out right away.</p>
+            <p>Along with the photos, I'll include short pieces of writing similar to journal entries or fragments to add context without over-explaining these periods. Overall, I'm trying to capture what it feels like to be in this in-between stage where things aren't fully figured out yet, and how independence kind of forms in small, everyday ways.</p>
+          </div>
+        </section>
+        <div class="about-rule" role="separator"></div>
+        <section class="about-section" aria-labelledby="me-heading">
+          <h2 id="me-heading" class="about-subheading">About me</h2>
+          <div class="prose">
+            <p>My name is Tabassum Chowdhury, and I am a senior at the University of Michigan studying UX Design with a minor in Writing.</p>
+            <p>I'm a photographer, writer, and someone who pays a lot of attention to the moments in between. Things that people don't always notice at first, but remember later. My work is often rooted in personal experience, shaped by memory, identity, and the environments I move through.</p>
+            <p>This project brings together the two things I care most about: visual storytelling and reflection. It is both a documentation of my final semester and a way of making sense of it in real time.</p>
+          </div>
+        </section>
+        <div class="about-rule" role="separator"></div>
+        <dl class="about-detail">
+          <div class="about-detail-row">
+            <dt>Institution</dt>
+            <dd>University of Michigan · Class of 2026</dd>
+          </div>
+          <div class="about-detail-row">
+            <dt>Medium</dt>
+            <dd>35mm film · January — May 2026</dd>
+          </div>
+          <div class="about-detail-row">
+            <dt>Course</dt>
+            <dd>MiW Capstone Project</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- ══ JANUARY ══ -->
+    <article class="month-page active" id="page-jan" aria-labelledby="jan-heading">
+      <header class="month-hero">
+        <p class="month-eyebrow">Roll 01 — 35mm</p>
+        <h1 class="month-title" id="jan-heading">January 2026</h1>
+        <p class="month-count">5 frames</p>
+      </header>
+
+      <!-- Frame 01: The wedding -->
+      <section class="vignette-section" id="s-wedding" aria-labelledby="jan-v1-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 01">Frame 01</p>
+          <h2 class="v-title" id="jan-v1-heading">The wedding</h2>
+        </header>
+        <figure class="photo-area pa-single">
+          <img src="images/jan/wedding.jpg" alt="A bouquet of white roses, sequined heels, and a beaded clutch scattered on a marble tile floor after a wedding ceremony" />
+          <figcaption class="film-corner">35mm · Jan '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>I took this photo after everything was over. After the ceremony, after the portraits, after all the moments that were supposed to matter most. Her bouquet was on the ground, her shoes kicked off, her clutch slightly open like it had been set down without thinking. Nothing was posed anymore. Nothing was being performed.</p>
+          <p>I stood there for a second longer than I needed to.</p>
+          <p>I met her freshman year. She met him freshman year.</p>
+          <p>Back then, life felt contained to smaller things — classes, schedules, friendships that were just beginning to take shape. Marriage wasn't something that belonged to us. It was something we watched from a distance, something reserved for people who had their lives figured out in ways we didn't.</p>
+          <p>And now she's married.</p>
+          <p>Not in a way that feels shocking or rushed, but in a way that makes sense. That's what I can't stop thinking about. It makes sense. It fits. There's nothing about it that feels out of place.</p>
+          <p>Which is what makes it feel so unreal.</p>
+          <p>At some point, without noticing, we became the kind of people this happens to. The kind of people for whom marriage isn't a distant idea, but a real, possible next step. Some people would look at us now and say we're grown.</p>
+          <p>I don't know if I agree.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">02</span></div>
+
+      <!-- Frame 02: The bench -->
+      <section class="vignette-section" id="s-bench" aria-labelledby="jan-v2-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 02">Frame 02</p>
+          <h2 class="v-title" id="jan-v2-heading">The bench</h2>
+        </header>
+        <figure class="photo-area pa-three">
+          <img src="images/jan/bench1.jpg" alt="A snow-covered wooden bench in Nichols Arboretum beside a large tree trunk, surrounded by fallen leaves and snowflakes" />
+          <img src="images/jan/bench2.jpg" alt="Snowy path winding through bare winter trees in the Arb, with snowflakes visible mid-air" />
+          <img src="images/jan/bench3.jpg" alt="Tabassum walking along a snowy path in the Arb, arms out, smiling as snow falls around her" />
+          <figcaption class="film-corner">35mm · Jan '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>I have seen this bench a billion times. It's always been there, something I pass without thinking, something that just exists in the background of the Arb. But this time it was covered in snow.</p>
+          <p>It was storming when we went. Not the quiet kind either. The kind where the snow hits your face, sticks to your clothes, makes everything feel heavier. I went with my best friend — the person who has, without even realizing it, replaced so many of my bad memories of Nichols Arboretum with good ones.</p>
+          <p>But I'm the kind of person for whom memories stick. Not all of them. Just certain ones. Very specific ones.</p>
+          <p>Like when my brother told me I was too stupid to get into Michigan. Or when my mom told me I was becoming a bad daughter because I moved out. Or when my cousin told me he was proud of me right before he died.</p>
+          <p>This bench holds one too.</p>
+          <p>It holds a version of me who wasn't fully myself anymore, someone who had quietly distanced herself from the people who cared about her, for someone who did not. I sat on this bench freshman year, but I don't think I ever really saw it.</p>
+          <p>This time, I saw it. I saw a younger version of myself sitting on it on a warm Friday morning, three years ago.</p>
+          <p>I stared at the bench for a good minute. Probably longer. Just standing there in the cold, letting everything come back, but not in the same way it used to. The memories didn't feel as heavy. It didn't feel like something I was still stuck in.</p>
+          <p>I just stood there, in the freezing Michigan weather, proud of myself.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">03</span></div>
+
+      <!-- Frame 03: The game -->
+      <section class="vignette-section" id="s-game" aria-labelledby="jan-v3-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 03">Frame 03</p>
+          <h2 class="v-title" id="jan-v3-heading">The game</h2>
+        </header>
+        <figure class="photo-area pa-three">
+          <img src="images/jan/game1.jpg" alt="Tabassum kneeling on the Crisler Arena court holding a large telephoto lens and a camera, smiling at the photographer, with a packed crowd in the background" />
+          <img src="images/jan/game2.jpg" alt="A fellow student photographer crouching on the sideline holding two cameras, Michigan basketball game in progress behind her" />
+          <img src="images/jan/game3.jpg" alt="Another student photographer seated courtside holding a Nikon camera with a long lens, cheerleaders and crowd visible behind her" />
+          <figcaption class="film-corner">35mm · Jan '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>These photos were taken at a Michigan basketball game. Nothing particularly special about the game itself. No big rivalry, no defining moment, nothing that would make it memorable to anyone else.</p>
+          <p>But it felt special to me.</p>
+          <p>I was there with two other student photographers, all of us switching between lenses on the sidelines, tracking plays, trying to catch the perfect shot in the middle of something fast, loud, and constantly moving. One second I'm focused on freezing a moment mid-air; the next, I'm being asked about setting spray.</p>
+          <p>"Your skin is always flawless," she said. And I didn't think twice before going into my entire routine — step by step, product by product — like it mattered just as much as anything else we were doing there.</p>
+          <p>And it did. Because if that isn't girlhood, then I don't know what is.</p>
+          <p>The way we can move so easily between worlds. From something high-pressure and technical to something soft and familiar without even noticing the shift. The way those conversations happen in between everything else, casually, like they've always been there.</p>
+          <p>Senior year has made me realize how important that is. It made me realize how rare it is to have friendships that feel that easy. So innocent and unequivocally loving, that it can't really be explained.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">04</span></div>
+
+      <!-- Frame 04: The boy -->
+      <section class="vignette-section" id="s-boy" aria-labelledby="jan-v4-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 04">Frame 04</p>
+          <h2 class="v-title" id="jan-v4-heading">The boy</h2>
+        </header>
+        <figure class="photo-area pa-three">
+          <img src="images/jan/boy1.jpg" alt="A plate of pancakes and a bowl of tater tots on a dark table, hands making a heart shape above the food at Pizza House" />
+          <img src="images/jan/boy2.jpg" alt="Two friends smiling at Pizza House, both wearing hijabs, holding up forks and a knife as if ready to eat" />
+          <img src="images/jan/boy3.jpg" alt="Two more friends at Pizza House smiling and holding up silverware, one wearing glasses" />
+          <figcaption class="film-corner">35mm · Jan '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>We ended up at Pizza House at midnight.</p>
+          <p>It was one of those nights where the cold didn't feel real until you stepped outside. The kind that hits your face all at once, makes your eyes water, makes you walk faster without saying anything. We were freezing the entire way there, laughing through it, complaining, pulling our jackets tighter around us like that would somehow help.</p>
+          <p>When we got inside, everything felt warmer than it actually was.</p>
+          <p>We ordered pancakes and tater tots, like we always do. One plate with chocolate chips, one plain, both covered in syrup that kept spilling over the edges. The table was crowded — plates, forks, napkins we barely used, phones lighting up every few minutes.</p>
+          <p>It wasn't a special night. We were just there because we had nothing better to do.</p>
+          <p>We talked about everything that felt important at the time. Drama in our lives, messy friendships, future careers, families, love lives — it felt like everything.</p>
+          <p>I remember looking up in between conversations and just taking it in. The way we were sitting. The way nothing felt rushed. The way it all felt so normal, like a moment we didn't need to hold onto because there would be so many more like it.</p>
+          <p>I still took photos.</p>
+          <p>The next morning, I woke up to a message in our group chat. A link. "Body found of UMich student reported missing."</p>
+          <p>I clicked it without thinking. "19-year-old… was last seen walking alone… on the 1700 block of Hill Street near Washtenaw Avenue… at about 1:30 a.m. Friday."</p>
+          <p>We had just been there.</p>
+          <p>That's the part that stayed with me. Not just that it happened, but how close it was. How ordinary it sounded. How easily it could have been any of us — walking, talking, existing in the same spaces without thinking twice about it.</p>
+          <p>He was younger than us. Living in the same city. Doing the same things.</p>
+          <p>And suddenly, the night before felt different. The pancakes didn't just feel like pancakes anymore. The conversations didn't just feel like conversations. Everything felt more fragile. Like it existed on the edge of something we don't think about until we're forced to.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">05</span></div>
+
+      <!-- Frame 05: The IM -->
+      <section class="vignette-section" id="s-im" aria-labelledby="jan-v5-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 05">Frame 05</p>
+          <h2 class="v-title" id="jan-v5-heading">The IM</h2>
+        </header>
+        <figure class="photo-area pa-single">
+          <img src="images/jan/im.jpg" alt="The IM Sports Building at the University of Michigan — a grand brick building with a large arched window — photographed from across a snow-covered plaza on a blue-sky winter day" />
+          <figcaption class="film-corner">35mm · Jan '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>This is the IM building.</p>
+          <p>I've worked here since the beginning of my sophomore year — August 2023. It's just a building to most people. Somewhere you swipe in, work out, leave. I never even went to the gym before this. It wasn't something I cared about, not something I saw myself being a part of.</p>
+          <p>But this place means something different to me.</p>
+          <p>I had just come back to Ann Arbor after the worst summer of my life. I was living in a house where I wasn't even on speaking terms with two out of the four people there. Every day felt heavy. I carried this constant, quiet pain from everything that had been said, everything that had happened. It didn't feel like a home. It felt like something I was stuck in.</p>
+          <p>And I kept hearing the same things over and over again. "I'll figure out a way to take away your scholarships." "I'll never pay for anything again." "You'll be stuck here forever." "You'll never be able to leave." "You're an idiot." "Be smarter." "What is wrong with you?"</p>
+          <p>At some point, I stopped reacting to the words and just started believing I needed a way out. So I got a job.</p>
+          <p>My first job ever — the product of being the youngest daughter, I guess. The closest thing I could find. I didn't care what it was. It wasn't about interest, it wasn't about passion. It was about survival. It was about giving myself something, anything, that felt like control.</p>
+          <p>When I applied in June 2023 and got the job two weeks later, I sobbed. Because for the first time, I felt like I had done something for myself. Like I had created even the smallest opening to get out of a place that felt suffocating.</p>
+          <p>And somehow, this building became more than just a job. I met some of my best friends here. I had somewhere to go. Something to do. A reason to not just sit in my thoughts. It gave me structure when everything else felt unstable.</p>
+          <p>Looking back now, it doesn't feel like a small decision. It feels like the first real step I took toward finding myself.</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ══ FEBRUARY ══ -->
+    <article class="month-page" id="page-feb" aria-labelledby="feb-heading" hidden>
+      <header class="month-hero">
+        <p class="month-eyebrow">Roll 02 — 35mm</p>
+        <h1 class="month-title" id="feb-heading">February 2026</h1>
+        <p class="month-count">3 frames</p>
+      </header>
+
+      <!-- Frame 01: The routine -->
+      <section class="vignette-section" id="s-routine" aria-labelledby="feb-v1-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 01">Frame 01</p>
+          <h2 class="v-title" id="feb-v1-heading">The routine</h2>
+        </header>
+        <figure class="photo-area pa-single">
+          <img src="images/feb/routine.jpg" alt="Three friends standing in front of the IM building in winter, smiling at the camera — the same building from January, now a meeting place" />
+          <figcaption class="film-corner">35mm · Feb '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>Is there a theme here? We're back at the IM.</p>
+          <p>At this point, it's just… normal. A routine. I wake up, get ready for class, check the weather, and decide — do I risk it and drive to the back lot of the IM for the two-hour parking (it's always a gamble), or do I walk to the IM bus stop and head into campus that way?</p>
+          <p>It's weird how much this place has infiltrated my life.</p>
+          <p>Even now, when I'm juggling three jobs and only have time for one shift here, I still find myself walking into this building at least four times a week. Not even for work. Sometimes just to cut through to the bus stop. Sometimes to play racquetball. Sometimes to walk on the track in the back, getting lost in long conversations about anything and everything.</p>
+          <p>I am always here.</p>
+          <p>And now, somehow, my friends are too. People who had never stepped foot in this building before I started working here now treat it like it's part of their routine too. Isn't that strange?</p>
+          <p>How one person's life slowly seeps into the lives of the people around them. The places they go, the habits they build, the language they use. The good, the bad, and everything in between.</p>
+          <p>People really are a culmination of those around them.</p>
+          <p>It's funny, because my parents used to say this to me all the time growing up. "Be careful who your friends are, they'll influence you," they'd say, over and over again, in their stern Bangla.</p>
+          <p>And I used to roll my eyes. I'm my own person, I'd think. I was stubborn. Quiet, but stubborn.</p>
+          <p>And now I'm here — not that much older — and somehow, everything they said makes sense.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">02</span></div>
+
+      <!-- Frame 02: The team -->
+      <section class="vignette-section" id="s-team" aria-labelledby="feb-v2-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 02">Frame 02</p>
+          <h2 class="v-title" id="feb-v2-heading">The team</h2>
+        </header>
+        <figure class="photo-area pa-three">
+          <img src="images/feb/team1.jpg" alt="Tabassum standing on the basketball court after a game, smiling and holding her camera, players visible behind her" />
+          <img src="images/feb/team2.jpg" alt="Two male friends smiling in a restaurant booth, one holding a red drink, the other biting into food" />
+          <img src="images/feb/team3.jpg" alt="A friend smiling broadly in a restaurant booth, an almost-empty plate and milkshake in front of her" />
+          <figcaption class="film-corner">35mm · Feb '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>The 2025–2026 Michigan Men's Basketball team. What a run they've had — are still having.</p>
+          <p>By this point in the year, I was burnt out. Fall semester took a lot out of me, especially with sports photography. But somehow, basketball always brings me back. There's something about it — the energy, the noise, the constant movement. The sound of shoes squeaking on the court, the crowd reacting in real time. It never really gets old.</p>
+          <p>But this game felt different.</p>
+          <p>Being a woman in sports is already hard enough. Add being young, surrounded by men decades older, constantly being looked at like you don't belong. And then add everything else — being a person of color, wearing a hijab. It's isolating. There's no other way to put it.</p>
+          <p>I got there an hour early, like I always do. I walked through the Crisler service entrance, said my usual hello to my favorite event staff member, grabbed my credential, and made my way to the media room. And like always, it was a wall of men.</p>
+          <p>And then I heard a thick French accent I immediately recognized. MG. Marc-Gregor Campredon. We started talking right away — about assignments, what we'd both been working on, how things had been going. The conversation shifted to how hard it is for young photographers to gain respect in this field.</p>
+          <p>At one point, he said something that stuck with me. "Don't take this the wrong way, but I'm glad someone like you is out there."</p>
+          <p>And for a second, everything shifted. I thought about how much I had been focusing on what felt difficult, what felt unfair, what felt exhausting. And suddenly, I saw it differently. Time is moving, and I'm in these spaces for a reason. I'm not just trying to belong. I already do.</p>
+          <p>After the first half of the game, he noticed my film camera sitting on the table. "I started with something like this," he said. "Have you taken any photos today?" "No," I told him. "Make sure you do before you leave."</p>
+          <p>And I did. In the middle of the game, in between fast-paced action shots I was supposed to be sending off to my team in Chicago, I pulled out my film camera. Something slower. Something intentional. I took one photo. And then later that month, at hockey, I did it again.</p>
+          <p>Two moments, in the middle of everything fast and overwhelming, where I chose to slow down. I love that photo. It's hanging on my living room wall now.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">03</span></div>
+
+      <!-- Frame 03: The reset -->
+      <section class="vignette-section" id="s-reset" aria-labelledby="feb-v3-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 03">Frame 03</p>
+          <h2 class="v-title" id="feb-v3-heading">The reset</h2>
+        </header>
+        <figure class="photo-area pa-three">
+          <img src="images/feb/reset1.jpg" alt="Four young women in hijabs and abayas standing together smiling in front of decorative Islamic arch panels at the mosque" />
+          <img src="images/feb/reset2.jpeg" alt="Michigan hockey arena scoreboard hanging from the ceiling showing the game in progress, crowd filling the stands below" />
+          <img src="images/feb/reset3.jpg" alt="Wide shot of Crisler Arena during a Michigan basketball game, showing the court from the baseline, crowd and championship banners visible" />
+          <figcaption class="film-corner">35mm · Feb '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>First day of Ramadan.</p>
+          <p>I wonder if this is what Christmas feels like for most of the US. Not in the surface-level way, but in the sense that everything just feels aligned. Like there's a shared understanding in the air.</p>
+          <p>This photo is from the first taraweeh of the month. My friends and I went to the mosque together, standing shoulder to shoulder in prayer with people we know and people we don't, but somehow it doesn't matter. Ramadan does that. It brings everyone to the same place, no matter where they were before.</p>
+          <p>It doesn't matter how strong your faith was before this. It doesn't matter what you think you've done wrong. It doesn't matter how far you feel from the person you want to be. Ramadan feels like a reset.</p>
+          <p>Conversations that don't usually happen start to. People show up in ways they don't always have the space for the rest of the year. There's a kind of quiet reconnection that happens without needing to name it.</p>
+          <p>They say God locks away the devil during this month, that we're given a clean slate. And whether you interpret that literally or not, it feels real. Like for once, you're not fighting against everything at once. Like you're being given space to try again.</p>
+          <p>At the start of this year, I had so many questions for God. What are your plans for me? Why does everything feel so unclear right now? Will I be okay?</p>
+          <p>I don't even know how that sounds to someone who isn't spiritual. I've always wondered that. Not in a judgmental way, just genuinely — where do you go with those questions? Where do you put them when everything feels uncertain?</p>
+          <p>For me, they go here. Into this month. Into these nights. Into something bigger than myself.</p>
+          <p>My goal this Ramadan seems simple. I want to be someone who gives more, who reacts less, who carries themselves with more intention. And what I love about it is that I'm not doing it alone.</p>
+          <p>There's something about knowing that an entire community is trying, at the same time, to work on the worst parts of themselves. That we all collectively decide, even if just for a month, to be more patient, more generous, more aware. It makes change feel… reachable.</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ══ MARCH ══ -->
+    <article class="month-page" id="page-mar" aria-labelledby="mar-heading" hidden>
+      <header class="month-hero">
+        <p class="month-eyebrow">Roll 03 — 35mm</p>
+        <h1 class="month-title" id="mar-heading">March 2026</h1>
+        <p class="month-count">4 frames</p>
+      </header>
+
+      <!-- Frame 01: The experiences -->
+      <section class="vignette-section" id="s-experiences" aria-labelledby="mar-v1-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 01">Frame 01</p>
+          <h2 class="v-title" id="mar-v1-heading">The experiences</h2>
+        </header>
+        <figure class="photo-area pa-two">
+          <img src="images/march/experiences1.jpg" alt="Seven young women dressed in formal and traditional attire sitting together and smiling at a Ramadan dinner event, with a floor lamp and nighttime windows behind them" />
+          <img src="images/march/experiences2.jpg" alt="Three friends at an Iftar event smiling in front of a hand-painted Ramadan banner, one holding a plate of food" />
+          <figcaption class="film-corner">35mm · Mar '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>I have known these girls since I started college. Some of them, even before that — back in grade school, in versions of ourselves that feel both far away and not that far at all.</p>
+          <p>And now here we are, four years later, sitting around a table having dinner together.</p>
+          <p>I wouldn't say I know all of them deeply. Not in the sense that I know every detail of their lives or every version of who they've been. But I do know them, in the way that comes from time and proximity and simply having been there at the same moments.</p>
+          <p>We've shared enough for that.</p>
+          <p>Classes, spaces, mutual people, phases of life that overlapped just long enough to leave something behind. The kind of shared experiences that don't demand closeness, but create a quiet version of it anyway.</p>
+          <p>It's interesting how that works, because shared experiences don't always bring people together in a good way. Sometimes they tie people to things they've outgrown, or to versions of themselves they'd rather leave behind. But other times, like the one in these photos, it's softer than that.</p>
+          <p>Sometimes it's just enough to bring people back to the same table years later, without needing to explain everything that happened in between. Enough that someone still thinks to host a dinner, to reach out, to keep something going.</p>
+          <p>Some connections don't need to be defined or proven. They just continue to exist.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">02</span></div>
+
+      <!-- Frame 02: The cat -->
+      <section class="vignette-section" id="s-cat" aria-labelledby="mar-v2-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 02">Frame 02</p>
+          <h2 class="v-title" id="mar-v2-heading">The cat</h2>
+        </header>
+        <figure class="photo-area pa-two">
+          <img src="images/march/cat1.jpg" alt="Close-up of Sage the grey cat sitting on a couch in golden afternoon light, a hand reaching toward her from the left" />
+          <img src="images/march/cat2.jpg" alt="Tabassum's living room with a cat tree on the left, Sage sitting alert on a white couch by a sunlit window" />
+          <figcaption class="film-corner">35mm · Mar '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>Sagey.</p>
+          <p>In all aspects, the creature that saved me.</p>
+          <p>I got her my sophomore year of college. It started at the cat café in Ann Arbor, where I kept going in and falling in love with kittens that had already been signed for. It kept happening, over and over again, and I got so tired of leaving disappointed that I decided to go straight to the humane society where they came from.</p>
+          <p>I went three days in a row during the last week of October 2023. Each time, I walked in thinking I would just know when I found the right one. Like those videos where a stray cat chooses their person. I was waiting for that feeling.</p>
+          <p>On the third day, I thought I had found her. A grey and white kitten, two months old, named Lily. I convinced myself that was it. Not because she chose me, but because I was sad and lonely and I needed something — someone — to fill that space.</p>
+          <p>And then everything shifted. I turned and saw her. Fluffy, round, completely grey with one blonde finger, with these striking green eyes. I looked down at the card and read the name, "Cabbage Patch Kid," and just laughed. In the next moment, Lily was handed to the person next to me, and suddenly I was the one signing for this other cat.</p>
+          <p>I changed her name immediately. Sage. Often a person known for having profound wisdom. Even at 6 months old, she looked at me like she could see right through me.</p>
+          <p>I got her at one of the darkest points in my life, and somehow also right before another one. It almost feels like the timing wasn't random, like something bigger than me knew I would need her before I did.</p>
+          <p>She's not affectionate in the way people expect. She won't come sit on my lap or let me hold her for long. Most of the time, she swats me away. But she stays in her own way.</p>
+          <p>When I'm studying until 3 a.m., she sits close yet far. Her eyes get heavier as time passes, but she'll stay. She waits. And when I finally go to bed, she follows, quietly slipping under the blanket and settling right next to me, like she's been waiting for that exact moment all along.</p>
+          <p>It's not loud or obvious. But it's consistent. That's how I know she chose me… eventually.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">03</span></div>
+
+      <!-- Frame 03: The rush -->
+      <section class="vignette-section" id="s-rush" aria-labelledby="mar-v3-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 03">Frame 03</p>
+          <h2 class="v-title" id="mar-v3-heading">The rush</h2>
+        </header>
+        <figure class="photo-area pa-two">
+          <img src="images/march/rush1.jpg" alt="Students sitting and lying on the grass in front of the Law Quad's gothic stone buildings on a warm early spring day, bare trees against a grey-blue sky" />
+          <img src="images/march/rush2.jpg" alt="Four friends sitting on curved concrete steps in front of a modern glass building on campus, smiling and holding laptops" />
+          <figcaption class="film-corner">35mm · Mar '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>When I got the email from ProCam that my photos were ready, I didn't rush to open it like I usually do. I wasn't excited to relive March, mostly because I couldn't even remember what I did that month. It felt like it passed without asking me first.</p>
+          <p>And just like that, it was one less month of college.</p>
+          <p>I finally opened the file at 1 a.m. I went through the photos slowly this time. Not just looking, but trying to remember. The moments, the people I was with, the sounds, even the feeling of the air in those spaces. It all came back in pieces.</p>
+          <p>And then I got to the photo on the right. My first thought was, this is the kind of photo you show your kids in 50 years.</p>
+          <p>When I was younger, my parents had these two huge photo albums. They still do. I used to flip through them all the time, studying every image, almost jealous of the lives they had before me. Mostly because I wasn't in many of them.</p>
+          <p>It felt like by the time I was born, things had slowed down. Like they stopped going places, stopped taking photos, stopped documenting their lives in the same way. So I learned their stories through what they had already saved.</p>
+          <p>Bangladesh — cousins I've never met. New York — a one-bedroom apartment with two toddlers. My dad — standing in front of his college, saying, "I studied the sciences," like he needed to prove something.</p>
+          <p>To me, those photos always felt beautiful. Full of life, full of meaning. But I know now that they probably held something else too. Stress, uncertainty, things I couldn't see at the time.</p>
+          <p>And now I'm here, looking at my own. Imagining a version of my life where I'm showing these to my kids one day, saying, "This is where I went to college. These were my best friends."</p>
+          <p>And I hope that when they look at them, they see what I saw in my parents' photos. Something worth holding onto.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" role="separator"><span class="v-divider-num" aria-hidden="true">04</span></div>
+
+      <!-- Frame 04: The end -->
+      <section class="vignette-section" id="s-end" aria-labelledby="mar-v4-heading">
+        <header class="vignette-header">
+          <p class="v-eyebrow" aria-label="Frame 04">Frame 04</p>
+          <h2 class="v-title" id="mar-v4-heading">The end…</h2>
+        </header>
+        <figure class="photo-area pa-single">
+          <img src="images/march/end.jpg" alt="The front door of 855 S First Street — a white colonial-style entrance with two lanterns and the number 855 above the door, set into a red brick building" />
+          <figcaption class="film-corner">35mm · Mar '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>855 S First Street, Apt 3, Ann Arbor, MI 48103.</p>
+          <p>Every morning for the last month, I've woken up and stared at my bedroom ceiling for a steady five minutes. Not scrolling, not getting up, just looking. Thinking, a couple more days, and I will never wake up to this ceiling again.</p>
+          <p>I've lived in this apartment for three years.</p>
+          <p>I made it a home. My haven. My safe place.</p>
+          <p>Most people might look back and call it their "college apartment," something temporary, something replaceable. But this never felt like that to me. This was one of the first real steps I took toward my own autonomy.</p>
+          <p>This was where I learned how to live on my own. Where I figured out how to exist without constantly asking for permission. Where I made decisions — small ones at first, then bigger ones — about how I wanted my life to look, how I wanted my days to feel. It's where I learned how to be alone without feeling lonely, and also where I learned how to let people in on my own terms.</p>
+          <p>Every corner of this place holds something. Late nights at my desk, studying until everything blurred together. Mornings where I didn't want to get out of bed but did anyway. Conversations in the kitchen that stretched longer than they needed to. Silence that felt comforting instead of empty.</p>
+          <p>It wasn't always perfect. There were moments here that felt heavy, days that felt isolating, nights where everything caught up to me. But even then, it was mine. That's what made the difference.</p>
+          <p>And now, I walk through these rooms knowing I'm about to leave them behind. Packing things into boxes, slowly undoing the life I built here, piece by piece.</p>
+          <p>It feels strange. I don't know what the next place will feel like yet. But I know this one changed me. And I think I'll always measure "home" against this ceiling.</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ══ APRIL — Coming soon ══ -->
+    <article class="month-page" id="page-apr" aria-labelledby="apr-heading" hidden>
+      <div class="undeveloped-page">
+        <p class="ud-eyebrow" id="apr-heading">April 2026 — Roll 04</p>
+        <div class="ud-box" aria-label="Roll not yet developed">
+          <div class="ud-sprockets" aria-hidden="true">
+            <div class="ud-sp"></div><div class="ud-sp"></div><div class="ud-sp"></div><div class="ud-sp"></div>
+          </div>
+          <div>
+            <div class="ud-frames" aria-hidden="true">
+              <div class="ud-frame"></div><div class="ud-frame"></div><div class="ud-frame"></div><div class="ud-frame"></div>
+            </div>
+            <p class="ud-label">roll not yet developed</p>
+          </div>
+          <div class="ud-sprockets" aria-hidden="true">
+            <div class="ud-sp"></div><div class="ud-sp"></div><div class="ud-sp"></div><div class="ud-sp"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
