@@ -326,6 +326,23 @@ body {
 }
 .pa-two > img { width: 100%; height: auto; display: block; }
 
+.pa-landscape-top .landscape-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pa-landscape-top .portraits-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+}
+.pa-landscape-top .portraits-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .pa-three {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -396,7 +413,7 @@ body {
 }
 
 .about-body {
-  max-width: 680px;
+  max-width: var(--max-w);
   margin: 0 auto;
   padding: 56px 28px 100px;
 }
