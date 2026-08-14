@@ -5,18 +5,20 @@
 (function () {
   'use strict';
 
-  const MONTHS = ['about', 'jan', 'feb', 'mar', 'apr'];
+  const MONTHS = ['about', 'jan', 'feb', 'mar', 'apr', 'epilogue'];
 
   const MONTH_SECTIONS = {
     jan: ['s-wedding', 's-bench', 's-game', 's-boy', 's-im'],
     feb: ['s-routine', 's-team', 's-reset'],
     mar: ['s-experiences', 's-cat', 's-rush', 's-end'],
+    apr: ['s-reconciliation', 's-trip', 's-moment'],
   };
 
   const FRAME_PREFIX = {
     jan: 'fi-jan-',
     feb: 'fi-feb-',
     mar: 'fi-mar-',
+    apr: 'fi-apr-',
   };
 
   const PARALLAX_AMP = 0.09;
@@ -28,6 +30,10 @@
   function getHeaderHeight() {
     var h = document.getElementById('site-header');
     return h ? h.offsetHeight : 0;
+  }
+
+  function syncHeaderHeightVar() {
+    document.documentElement.style.setProperty('--header-h', getHeaderHeight() + 'px');
   }
 
   function updateTally() {
@@ -124,7 +130,7 @@
         }
       });
 
-      ['jan', 'feb', 'mar'].forEach(function (m) {
+      ['jan', 'feb', 'mar', 'apr'].forEach(function (m) {
         var strip = document.getElementById('strip-' + m);
         if (!strip) return;
         strip.classList.toggle('visible', m === month);
@@ -200,7 +206,7 @@
     var janTab = document.getElementById('ntab-jan');
     if (janTab) { janTab.classList.remove('active'); janTab.setAttribute('aria-current', 'false'); }
 
-    ['jan', 'feb', 'mar'].forEach(function (m) {
+    ['jan', 'feb', 'mar', 'apr'].forEach(function (m) {
       var strip = document.getElementById('strip-' + m);
       if (strip) strip.classList.toggle('visible', m === currentMonth);
     });
@@ -208,8 +214,12 @@
     updateTally();
     updateActiveFrames();
     updateParallax();
+    syncHeaderHeightVar();
     initReveal();
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', function () {
+      window.requestAnimationFrame(syncHeaderHeightVar);
+    });
   }
 
   window.selectMonth = selectMonth;

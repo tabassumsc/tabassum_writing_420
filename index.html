@@ -22,11 +22,12 @@
     </div>
 
     <nav class="nav-rail" aria-label="Month navigation">
-      <button type="button" class="nav-tab active" id="ntab-about" aria-current="page"  onclick="selectMonth('about')">About</button>
-      <button type="button" class="nav-tab"        id="ntab-jan"   aria-current="false" onclick="selectMonth('jan')">January</button>
-      <button type="button" class="nav-tab"        id="ntab-feb"   aria-current="false" onclick="selectMonth('feb')">February</button>
-      <button type="button" class="nav-tab"        id="ntab-mar"   aria-current="false" onclick="selectMonth('mar')">March</button>
-      <button type="button" class="nav-tab"        id="ntab-apr"   aria-current="false" onclick="selectMonth('apr')">April</button>
+      <button type="button" class="nav-tab active" id="ntab-about"    aria-current="page"  onclick="selectMonth('about')">About</button>
+      <button type="button" class="nav-tab"        id="ntab-jan"      aria-current="false" onclick="selectMonth('jan')">January</button>
+      <button type="button" class="nav-tab"        id="ntab-feb"      aria-current="false" onclick="selectMonth('feb')">February</button>
+      <button type="button" class="nav-tab"        id="ntab-mar"      aria-current="false" onclick="selectMonth('mar')">March</button>
+      <button type="button" class="nav-tab"        id="ntab-apr"      aria-current="false" onclick="selectMonth('apr')">April</button>
+      <button type="button" class="nav-tab"        id="ntab-epilogue" aria-current="false" onclick="selectMonth('epilogue')">Epilogue</button>
     </nav>
 
     <!-- January strip -->
@@ -133,6 +134,34 @@
         <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
       </ul>
     </nav>
+
+    <!-- April strip -->
+    <nav class="frame-rail" id="strip-apr" aria-label="April frames">
+      <ul class="frame-strip">
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button type="button" onclick="jumpTo('s-reconciliation')" aria-label="Jump to frame 01 — The reconciliation">
+            <span class="frame-num">01</span>
+            <span class="frame-img" id="fi-apr-1"><img src="images/apr/brothers4.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button type="button" onclick="jumpTo('s-trip')" aria-label="Jump to frame 02 — The trip">
+            <span class="frame-num">02</span>
+            <span class="frame-img" id="fi-apr-2"><img src="images/apr/spain2.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+        <li class="frame-item">
+          <button type="button" onclick="jumpTo('s-moment')" aria-label="Jump to frame 03 — The moment">
+            <span class="frame-num">03</span>
+            <span class="frame-img" id="fi-apr-3"><img src="images/apr/grad1.jpg" alt="" /></span>
+          </button>
+        </li>
+        <li class="sprocket-group" aria-hidden="true"><div class="sp"></div><div class="sp"></div><div class="sp"></div></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- ══ MAIN ══ -->
@@ -152,22 +181,22 @@
         <div class="about-rule"></div>
 
         <section class="about-section reveal">
-          <h2 class="about-subheading">About this project</h2>
+          <h2 class="about-subheading">About me</h2>
           <div class="prose">
-            <p>For my capstone, I'm working on a photo narrative about my last semester of college. The main idea is looking at independence not as one big moment, but as something that builds slowly over time through everyday experiences. I originally was thinking about this more generally, but now I've shifted to structuring it as a timeline — from January through graduation — so you can actually see that progression as it happens.</p>
-            <p>I've also decided to only shoot on film, which is a big part of the project. I'm using one roll of 35mm film per month, so each roll kind of represents a specific period of time. Film forces me to slow down and be more intentional about what I capture, and I like that it mirrors the idea of gradual change and not really knowing how things will turn out right away.</p>
-            <p>Along with the photos, I'll include short pieces of writing similar to journal entries or fragments to add context without over-explaining these periods. Overall, I'm trying to capture what it feels like to be in this in-between stage where things aren't fully figured out yet, and how independence kind of forms in small, everyday ways.</p>
+            <p>My name is Tabassum, and I am a senior at the University of Michigan studying UX Design with a minor in Writing.</p>
+            <p>I'm a photographer, writer, and someone who pays a lot of attention to the moments in between. Things that people don't always notice at first, but remember later. My work is often rooted in personal experience, shaped by memory, identity, and the environments I move through.</p>
+            <p>This project brings together the two things I care most about: visual storytelling and reflection. It is both a documentation of my final semester and a way of making sense of it in real time.</p>
           </div>
         </section>
 
         <div class="about-rule"></div>
 
         <section class="about-section reveal">
-          <h2 class="about-subheading">About me</h2>
+          <h2 class="about-subheading">About this project</h2>
           <div class="prose">
-            <p>My name is Tabassum Chowdhury, and I am a senior at the University of Michigan studying UX Design with a minor in Writing.</p>
-            <p>I'm a photographer, writer, and someone who pays a lot of attention to the moments in between. Things that people don't always notice at first, but remember later. My work is often rooted in personal experience, shaped by memory, identity, and the environments I move through.</p>
-            <p>This project brings together the two things I care most about: visual storytelling and reflection. It is both a documentation of my final semester and a way of making sense of it in real time.</p>
+            <p>For my capstone, I'm working on a photo narrative about my last semester of college. The main idea is looking at independence not as one big moment, but as something that builds slowly over time through everyday experiences. I originally was thinking about this more generally, but now I've shifted to structuring it as a timeline — from January through graduation — so you can actually see that progression as it happens.</p>
+            <p>I've also decided to only shoot on film, which is a big part of the project. I'm using one roll of 35mm film per month, so each roll kind of represents a specific period of time. Film forces me to slow down and be more intentional about what I capture, and I like that it mirrors the idea of gradual change and not really knowing how things will turn out right away.</p>
+            <p>Along with the photos, I'll include short pieces of writing similar to journal entries or fragments to add context without over-explaining these periods. Overall, I'm trying to capture what it feels like to be in this in-between stage where things aren't fully figured out yet, and how independence kind of forms in small, everyday ways.</p>
           </div>
         </section>
 
@@ -180,7 +209,7 @@
           </div>
           <div class="about-detail-row">
             <dt>Medium</dt>
-            <dd>35mm film · January — April 2026</dd>
+            <dd>35mm film · January — May 2026</dd>
           </div>
           <div class="about-detail-row">
             <dt>Course</dt>
@@ -597,23 +626,150 @@
 
     <!-- ══ APRIL ══ -->
     <article class="month-page" id="page-apr" hidden>
-      <div class="undeveloped-page">
-        <p class="ud-eyebrow">April 2026 — Roll 04</p>
-        <div class="ud-box" aria-label="Film processing in progress">
-          <div class="ud-sprockets" aria-hidden="true">
-            <div class="ud-sp"></div><div class="ud-sp"></div>
-            <div class="ud-sp"></div><div class="ud-sp"></div>
+      <header class="month-hero reveal">
+        <p class="month-eyebrow">Roll 04 — 35mm</p>
+        <h1 class="month-title">April 2026</h1>
+        <p class="month-count">3 frames</p>
+      </header>
+
+      <section class="vignette-section reveal" id="s-reconciliation">
+        <header class="vignette-header">
+          <p class="v-eyebrow">Frame 01</p>
+          <h2 class="v-title">The reconciliation</h2>
+        </header>
+        <figure class="photo-area pa-filmstrip reveal">
+          <img class="parallax" src="images/apr/brothers1.jpg" alt="A packed arena during the NCAA Final Four, a jumbotron showing the Michigan team on the court below" />
+          <img class="parallax" src="images/apr/brothers2.jpg" alt="Tabassum taking a mirror selfie in a basketball jersey, holding a small digital camera" />
+          <img class="parallax" src="images/apr/brothers3.jpg" alt="Tabassum's two brothers smiling side by side in the back seat of a car at night" />
+          <img class="parallax" src="images/apr/brothers4.jpg" alt="Tabassum's brothers courtside holding matching blue &quot;All Dawg&quot; t-shirts, Detroit Pistons signage overhead" />
+          <img class="parallax" src="images/apr/brothers5.jpg" alt="A wide view of Little Caesars Arena during a Pistons playoff game, players on the court below" />
+          <img class="parallax" src="images/apr/brothers6.jpg" alt="Tabassum smiling on a lit-up city street at night, a &quot;Beat Detroit&quot; sign held behind her" />
+          <figcaption class="film-corner">35mm · Apr '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>There was a point in my life where I hated my brothers. It was the kind of hate that consumes you, the kind that somehow turns into motivation. I wanted to accomplish everything I had ever put my mind to just to prove a point, just to show them that I could become someone completely different from what they expected of me.</p>
+          <p>Maybe it was a difference in opinions. Maybe it was our lifestyles, or the way we understood the world. I think they thought I was naive, and I thought they were dense – stuck in the ways of our parents and everyone who came before us. I was so desperate to break away from everything that had shaped our childhood that I started seeing them as part of the thing I was trying to escape.</p>
+          <p>For a while, I really believed loving someone meant agreeing with them. And if I didn't agree with them, I didn't want anything to do with them.</p>
+          <p>I think age actually does something to you, though. Maybe it really is the frontal lobe finally doing its thing, or maybe you just get tired of carrying around the same anger. At some point, I realized I could love my family without believing everything they believed. I could disagree with them without needing to convince them. I could hear something that would have sent the old version of me into a tornado of anger and instead just smile, stay quiet, or say, "We can agree to disagree."</p>
+          <p>And somehow, that was enough.</p>
+          <p>With that mindset came the reconciliation.</p>
+          <p>My younger two brothers (still older than me) and I were incredibly close growing up. We went on the stupidest adventures together. Most of them started with a late-night drive and somehow ended with us trying a new restaurant, driving across the border into Canada on a random Wednesday, or deciding that we needed to go somewhere simply because none of us had anything better to do.</p>
+          <p>Then we stopped.</p>
+          <p>When I hated them, all of those little traditions disappeared. The late-night drives, the random plans, the feeling that if one of us said "want to go somewhere?" and the answer almost always yes.</p>
+          <p>But slowly, the ice started to thaw.</p>
+          <p>This year, we got a small part of us back.</p>
+          <p>It started with a text.</p>
+          <p>"Do you guys want to go to Indianapolis?"</p>
+          <p>The NCAA men's basketball championship was that night. Indianapolis was four hours away. Tickets were expensive. We had absolutely no business spending $800 on something we had decided to do approximately five minutes earlier.</p>
+          <p>Obviously, we went.</p>
+          <p>Four hours later, we were standing in Indianapolis, watching college basketball in person, laughing at the fact that we had actually done this. No planning. No hotel. No real reason. Just three siblings who apparently still had the ability to make terrible decisions together.</p>
+          <p>We drove home afterward and got back around 4 a.m.</p>
+          <p>And somehow, a few weeks later, we did it again.</p>
+          <p>This time, NBA playoff tickets. Bought last minute, because apparently we had learned nothing from Indianapolis.</p>
+          <p>I think there was something strangely comforting about it. These were the same kinds of stupid decisions we used to make when we were younger, except now we had our own money, our own cars, our own schedules, our own lives. We could leave at a moment's notice because we wanted to.</p>
+          <p>I don't think growing up doesn't have to mean outgrowing the people you grew up with, but finding new ways to grow alongside them.</p>
+          <p>A version of me never thought I'd want this back.</p>
+        </div>
+      </section>
+
+      <div class="v-divider" aria-hidden="true"><span class="v-divider-num" aria-hidden="true">02</span></div>
+
+      <section class="vignette-section reveal" id="s-trip">
+        <header class="vignette-header">
+          <p class="v-eyebrow">Frame 02</p>
+          <h2 class="v-title">The trip</h2>
+        </header>
+        <figure class="photo-area pa-masonry reveal">
+          <img class="parallax" src="images/apr/spain1.jpg" alt="Turquoise water breaking against rocky cliffs along the Spanish coastline" />
+          <img class="parallax" src="images/apr/spain2.jpg" alt="Tabassum standing on a hilltop overlooking a coastal Spanish city, camera around her neck" />
+          <img class="parallax" src="images/apr/spain4.jpg" alt="An empty, sunlit street winding between colorful buildings in a Spanish old town" />
+          <img class="parallax" src="images/apr/spain3.jpg" alt="Tabassum looking back at the camera beside a river in Seville, two people paddling small boats behind her" />
+          <figcaption class="film-corner">35mm · Apr '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>Do normal people book international trips one week before their flight takes off? What even is a normal person?</p>
+          <p>I remember when I was a teenager, I used to tell my older brother that I just wanted a normal childhood. He would tell me, this is our normal. Other families have their version of normal.</p>
+          <p>I thought there had to be some universal baseline of normal. Apparently not. But that's a conversation for another time.</p>
+          <p>Easy to say, this was not a normal decision. At least not in my life.</p>
+          <p>Spain was somewhere my best friend and I said we would go since freshman year of college. Four years ago, we told ourselves we would make it happen someday.</p>
+          <p>And then, suddenly, it was someday.</p>
+          <p>Neither of us grew up wealthy. Neither of us came from families where international travel was normal. We wanted to change that for ourselves. We wanted to see what existed outside of the lives we had always known.</p>
+          <p>Then we had our first fight as best friends.</p>
+          <p>It was bad. Four days of bad.</p>
+          <p>And weirdly, I wasn't scared.</p>
+          <p>I've known that feeling before. The slow realization that someone is pulling away from you, the overthinking, the wondering what you did wrong, the desperate feeling that you need to fix something before it's too late. But I didn't feel that this time.</p>
+          <p>Maybe it was because of the baseline I had spent so much of my life trying to figure out. Loyalty. Kindness. Understanding. The things I had always said mattered to me, even before I really knew how to recognize them in other people.</p>
+          <p>And maybe I chose her because she had those things.</p>
+          <p>So even when we were angry with each other, some part of me knew that four bad days didn't erase four good years. I trusted that what we had built was bigger than one argument.</p>
+          <p>The day we made up was the day we booked our flights. And I was so excited.</p>
+          <p>It felt bigger than a vacation. It felt like the beginning of something. Of meeting people from places I had never been. Eating food I had never tried. Walking streets that existed long before I did. Seeing how other people lived and realizing there wasn't one correct way to do it. Maybe that was part of what I needed to learn, too.</p>
+          <p>Spain made it very obvious that there are a million different ways to live a life.</p>
+          <p>Barcelona was a major city, but somehow everything felt slower. People worked, but they also sat outside for lunch with their friends. And not the kind of lunch where you're checking the time every five minutes because you have somewhere else to be. They sat. They talked. They ate. They stayed.</p>
+          <p>People seemed to actually inhabit their lives.</p>
+          <p>I kept noticing it.</p>
+          <p>And then I started wondering why I didn't.</p>
+          <p>There was something about watching people live that way that made me realize how much of my own life had been built around the next thing. The next semester. The next job. The next deadline. The next apartment. The next version of myself I was supposed to become.</p>
+          <p>And then I came home.</p>
+          <p>Michigan suddenly felt... small.</p>
+          <p>Not because Michigan had changed. I had.</p>
+          <p>I was graduating. I didn't know where I would live. I didn't know where I would work. I didn't know whether I would move somewhere new or end up back where I started. There was so much uncertainty sitting in front of me, and somehow none of it felt as exciting as Spain had.</p>
+          <p>It felt depressing.</p>
+          <p>I had spent years working toward this moment. I was supposed to be excited. I was supposed to feel accomplished.</p>
+          <p>Instead, I kept thinking:</p>
+          <p>Is this it?</p>
+          <p>Maybe that is what Spain gave me more than anything else. Not an answer, but a question.</p>
+          <p>What if I don't have to build my life around what is expected of me?</p>
+          <p>What if I can just... go?</p>
+        </div>
+      </section>
+
+      <div class="v-divider" aria-hidden="true"><span class="v-divider-num" aria-hidden="true">03</span></div>
+
+      <section class="vignette-section reveal" id="s-moment">
+        <header class="vignette-header">
+          <p class="v-eyebrow">Frame 03</p>
+          <h2 class="v-title">The moment</h2>
+        </header>
+        <figure class="photo-area pa-pin pa-pin-1 reveal">
+          <div class="lead parallax">
+            <img src="images/apr/grad1.jpg" alt="Graduates in caps and gowns filling Michigan Stadium during Commencement 2026, the stadium screen reading &quot;Michigan Stadium&quot;" />
           </div>
-          <div>
-            <div class="ud-frames" aria-hidden="true">
-              <div class="ud-frame"></div><div class="ud-frame"></div>
-              <div class="ud-frame"></div><div class="ud-frame"></div>
-            </div>
-            <p class="ud-label">film processing… come back soon</p>
-          </div>
-          <div class="ud-sprockets" aria-hidden="true">
-            <div class="ud-sp"></div><div class="ud-sp"></div>
-            <div class="ud-sp"></div><div class="ud-sp"></div>
+          <figcaption class="film-corner">35mm · Apr '26</figcaption>
+        </figure>
+        <div class="prose">
+          <p>People. What are people? Who are people? Why do they exist? Which higher deity put this strange little creature on earth and gave them the ability to have so much control over themselves, and somehow, over everyone around them? What is the point?</p>
+          <p>A person in someone's life is like an atom in a molecule. Tiny, seemingly insignificant, but remove it and suddenly you have something completely different. Like water. Take away one hydrogen and it isn't water anymore. I guess you get my point.</p>
+          <p>Standing in the Big House, I realized there are faces in this place that I will probably never see in real life again, no matter how many times I say "see you soon" or promise we'll keep in touch. That realization feels strange. Some people are slowly becoming strangers again, while other people I never expected to know are somehow impacting me more than I want. I've lived through enough change by now to know that this is normal, but that doesn't make it any less uncomfortable.</p>
+          <p>I don't think I've ever been particularly good at change. I like knowing where I stand, who will be there, what tomorrow looks like. But this felt like watching everything rearrange itself in real time. People were moving in and out of my life, sometimes quietly, sometimes all at once, and I was expected to just let it happen.</p>
+          <p>So I let it. I let myself feel it all.</p>
+          <p>I reminded myself that maybe this is what growing up actually feels like. Not some dramatic moment where you suddenly become an adult, but this slow realization that nothing stays exactly where you left it. You have to breathe it in and let it move through you, even when every part of you wants to hold onto what was.</p>
+          <p>And somehow, all of it made me realize just how fragile everything is.</p>
+          <p>I thought I would be sadder.</p>
+          <p>Instead, I remember standing there and wondering why I wasn't feeling more. Why wasn't I crying? Why didn't this feel as devastating as I thought it would?</p>
+          <p>Looking back, I think maybe I was too overwhelmed to be sad. There was already so much waiting for me on the other side of graduation. Finding a place to live. Finding a job. Figuring out what "real life" was supposed to look like now that no one was handing me a syllabus with a due date.</p>
+          <p>Maybe I wasn't numb.</p>
+          <p>Maybe I was just busy becoming someone who had somewhere else to go.</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ══ EPILOGUE ══ -->
+    <article class="month-page" id="page-epilogue" hidden>
+      <div class="epilogue-split reveal">
+        <div class="epilogue-photo">
+          <img src="images/epilogue/beauty1.jpg" alt="Sunlight breaking through a canopy of green trees over an empty park path" />
+        </div>
+        <div class="epilogue-text">
+          <h1 class="month-title">Epilogue</h1>
+          <div class="prose">
+            <p>Well, that's it. That was my semester.</p>
+            <p>I spent so much of it trying to notice things before they disappeared. The last walks. The last dinners. The last basketball games. The last time I would wake up in that apartment and stare at the same ceiling.</p>
+            <p>I think I was so afraid of everything ending that I forgot something very obvious: things are always ending.</p>
+            <p>Nature doesn't make a big announcement when a season changes. The trees don't tell you, this is the last green leaf. The flowers don't warn you that tomorrow they might be gone. One day you look around and realize the world is different.</p>
+            <p>I've realized that's just what it means to grow older.</p>
+            <p>Maybe I don't need to know exactly when I became independent. Maybe there wasn't a moment. Maybe it happened slowly, somewhere between learning how to leave, learning how to stay, learning who to love, learning who I am, and learning that I can still change my mind.</p>
+            <p>I think I've spent a lot of my life trying to get somewhere.</p>
+            <p>But for now, I'll just be here.</p>
           </div>
         </div>
       </div>
