@@ -488,7 +488,9 @@ body::after { display: none; }
 }
 
 /* ══ FILMSTRIP — horizontal scroll, natural aspect ratios ══ */
-.pa-filmstrip {
+/* the track (not the figure) owns overflow-x, so the film-corner tag
+   — positioned relative to the figure — doesn't scroll with the images */
+.filmstrip-track {
   display: flex;
   gap: 8px;
   overflow-x: auto;
@@ -496,7 +498,7 @@ body::after { display: none; }
   scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
 }
-.pa-filmstrip img {
+.filmstrip-track img {
   height: 230px;
   width: auto;
   flex: none;
@@ -505,7 +507,7 @@ body::after { display: none; }
   box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 520px) {
-  .pa-filmstrip img { height: 170px; }
+  .filmstrip-track img { height: 170px; }
 }
 
 /* ══ MASONRY — natural column heights, no forced cropping ══ */
